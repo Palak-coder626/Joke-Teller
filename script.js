@@ -1,7 +1,10 @@
-
 const audioElement =document.getElementById('audio');
 const button=document.getElementById('button');
+// Robotic voice
 const robotVoice = new Audio('robot.mp3');
+
+//converting the received joke to speech
+
 function convertToSpeech(joke){
     VoiceRSS.speech({
         key: 'fab0e4a1283f4fc986876be0fa2b1d14',
@@ -28,7 +31,6 @@ async function getJoke(){
         const [jokeText]=data;
         const {setup,punchline}=jokeText;
         joke=`${setup} ...${punchline}`;
-        console.log(joke);
        convertToSpeech(joke);
     }catch(error){
         console.log(error);
