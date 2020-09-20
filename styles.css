@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Montserrat:wght@400;600&display=swap');
+html{
+   font-size:10px;
+}
+*{
+   box-sizing:border-box;
+}
+
+body{
+margin:0;
+padding:0;
+min-height:100vh;
+background-color:#45badd;
+}
+
+.container{
+   height:100vh;
+   width:100vw;
+   background-image:url('./images/robot.gif');
+   background-repeat: no-repeat;
+   background-size:contain;
+   background-position:left center;
+}
+
+.header-text{
+   text-align:center;
+   color:#fff;
+   line-height:1;
+}
+.header-text h1{
+   font-family:'Montserrat Alternates', sans-serif;
+   font-size:5rem;
+   text-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.4);
+}
+.header-text p{
+   font-family:'Montserrat',sans-serif;
+   font-size:2.3rem;
+   font-weight:600;
+   text-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.4);
+}
+.flex-container{
+   height:70vh;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.flex-container button{
+   outline:none;
+   cursor: pointer;
+   padding:1.5rem 2rem;
+   background:linear-gradient(to top,#ff5d9e,#ff427f);
+   color:#fff;
+   font-family:'Montserrat',sans-serif;
+   font-size:2rem;
+   font-weight:400;
+   border:none;
+   border-radius:0.7rem;
+   box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.4);
+
+}
+
+.flex-container button:active{
+   transform:translateY(0.8rem);
+   background:linear-gradient(to bottom,#ff5d9e,#ff427f);
+   box-shadow:none;
+}
+
+.flex-container button:disabled{
+filter:brightness(30%);
+cursor:default;
+
+}
+
+/* Media Query:For Tablet Size */
+@media screen and (max-width:1000px)and(min-width:600px){
+   .flex-container button:active{
+      transform:scale(0.98);
+   }
+
+   .header-text h1{
+      font-size:4rem;
+   }
+   .header-text p{
+      font-size:2rem;
+   }
+   .flex-container button:disabled{
+      display:none;
+   }
+}
+/* Media Query:For mobile size */
+@media screen and (max-width:662px){
+   .header-text h1{
+      font-size:3.9rem;
+   }
+   .header-text p{
+      font-size:1.9rem;
+   }
+   .container{
+      background-position: center;
+      background-size:cover;
+   }
+   .flex-container button:active{
+      transform:scale(0.98);
+   }
+   .flex-container button:disabled{
+      display:none;
+   }
+}
