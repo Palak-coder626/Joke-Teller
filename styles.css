@@ -74,7 +74,7 @@ cursor:default;
 }
 
 /* Media Query:For Tablet Size */
-@media screen and (max-width:1000px)and(min-width:600px){
+@media screen and (max-width:1000px)and(min-width:662px){
    .flex-container button:active{
       transform:scale(0.98);
    }
@@ -85,14 +85,21 @@ cursor:default;
    .header-text p{
       font-size:2rem;
    }
+   .flex-container button{
+       -webkit-tap-highlight-color:transparent;
+   }
    .flex-container button:disabled{
       display:none;
    }
 }
 /* Media Query:For mobile size */
 @media screen and (max-width:662px){
+   .flex-container{
+      height:50vh;
+   }
    .header-text h1{
-      font-size:3.9rem;
+      font-size:3.8rem;
+      line-height:0.8;
    }
    .header-text p{
       font-size:1.9rem;
@@ -107,4 +114,7 @@ cursor:default;
    .flex-container button:disabled{
       display:none;
    }
+   .flex-container button{
+      -webkit-tap-highlight-color:transparent;
+  }
 }
